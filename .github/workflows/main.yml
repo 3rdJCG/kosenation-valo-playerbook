@@ -20,14 +20,14 @@ jobs:
     - name: Build LaTeX documents
       uses: 3rdJCG/latex-build-langja@0.1.0
       with:
-        root_file: main.tex
+        root_file: playerbook.tex
         args: -r .latexmkrc
     - name: Commit files
       run: |
-        git add main.pdf
+        git add playerbook.pdf
         git config --local user.email "3rdJCG@gmail.com"
         git config --local user.name "3rdJCG"
-        git commit -m "main.pdf PDF" -a
+        git commit -m "playerbook.tex typeseted" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
